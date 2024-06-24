@@ -13,7 +13,7 @@ const ShowBook = () => {
     const fetchBook = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3500/books/${id}`);
+        const response = await axios.get(`https://backend-7pfi.onrender.com/books/${id}`);
         setBook(response.data);
       } catch (error) {
         console.log(error);

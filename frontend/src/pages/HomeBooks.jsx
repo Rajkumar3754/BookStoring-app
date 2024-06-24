@@ -14,7 +14,7 @@ const HomeBooks = () => {
     const fetchBooks = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:3500/books');
+        const response = await axios.get('https://backend-7pfi.onrender.com/books');
         console.log('Response data:', response.data); // Log response data for debugging
         if (Array.isArray(response.data)) {
           setBooks(response.data);

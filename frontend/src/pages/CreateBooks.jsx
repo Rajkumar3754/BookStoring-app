@@ -26,7 +26,7 @@ const CreateBooks = () => {
     };
 
     try {
-      await axios.post('http://localhost:3500/books', data);
+      await axios.post('https://backend-7pfi.onrender.com/books', data);
       setLoading(false);
       navigate('/');
     } catch (error) {

@@ -16,7 +16,7 @@ const EditBooks = () => {
     const fetchBookDetails = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3500/books/${id}`);
+        const response = await axios.get(`https://backend-7pfi.onrender.com/books/${id}`);
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
         setTitle(response.data.title);
@@ -45,7 +45,7 @@ const EditBooks = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3500/books/${id}`, data);
+      await axios.put(`https://backend-7pfi.onrender.com/books/${id}`, data);
       setLoading(false);
       navigate('/');
     } catch (error) {

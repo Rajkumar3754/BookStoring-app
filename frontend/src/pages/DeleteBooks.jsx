@@ -12,7 +12,7 @@ const DeleteBooks = () => {
   const handleDeleteBook = async () => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:3500/books/${id}`);
+      await axios.delete(`https://backend-7pfi.onrender.com/books/${id}`);
       setLoading(false);
       navigate('/');
     } catch (error) {
